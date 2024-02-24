@@ -10,8 +10,7 @@ const { port, dbHost, dbPort, dbUser, dbPassword, dbName } = require("./config/c
 mongoose.Promise = global.Promise
 
 //Conexión BD
-//mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`).then(() => {
-mongoose.connect('mongodb://127.0.0.1:27017/orm_agenda').then(() => {
+mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`).then(() => {
     console.log('Mongo is connected')
 
     const app = express()
@@ -19,11 +18,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/orm_agenda').then(() => {
     app.use(morgan("dev"))
     app.use(morgan("combined"))
 
-    /*app.listen(port, () => {
+    app.listen(port, () => {
         console.log(`App listening on port: ${port}`)
-    })*/
-    app.listen(8094, () => {
-        console.log('App listening on port: 8094')
     })
     routerAPI(app);
 }).catch(error => console.error(`Database connection error: ${error.message}`))
