@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "be535b77-c7b5-43a9-bce1-f5184cb6eb2b",
+		"name": "orm_agenda_mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25546719"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/user/65da3a2d0692779cd1673408",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65da3a2d0692779cd1673408"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jane Smith sss\",\r\n    \"email\": \"jane@example.com\",\r\n    \"password\": \"password456\",\r\n    \"status\": true,\r\n    \"areaId\": \"area-456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8094/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/user/65d827b17425835038e9c02c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65d827b17425835038e9c02c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MAuricio perez\",\r\n    \"email\": \"jane@example.com\",\r\n    \"password\": \"password456\",\r\n    \"status\": true,\r\n    \"areaId\": \"area-456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8094/api/v1/user/65d7bee68be538b3e17f71d5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65d7bee68be538b3e17f71d5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Area",
+			"item": [
+				{
+					"name": "getAllArea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/area",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"area"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAreaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/area/65daac365911d7bc21402110",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"area",
+								"65daac365911d7bc21402110"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addArea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"003\",\r\n    \"name\": \"cartera\",\r\n    \"observations\": \"Area encargada de la cartera\",\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8094/api/v1/area",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"area"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteArea",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/api/v1/area/65da99476f8eef3e519e4417",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"area",
+								"65da99476f8eef3e519e4417"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editArea",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"002\",\r\n    \"name\": \"academico\",\r\n    \"observations\": \"Area encargada del academico\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8094/api/v1/area/65da9828ed3fd42b49b79ec6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"api",
+								"v1",
+								"area",
+								"65da9828ed3fd42b49b79ec6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

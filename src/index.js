@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const express = require('express')
 const morgan = require('morgan')
 const routerAPI = require('./routes')
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 //Declare variable enviroment
 const { port, dbHost, dbPort, dbUser, dbPassword, dbName } = require("./config/config")
@@ -22,6 +24,13 @@ mongoose.connect(`mongodb://${dbHost}:${dbPort}/${dbName}`).then(() => {
         console.log(`App listening on port: ${port}`)
     })
     routerAPI(app);
+
+    var options = {
+        customCss: '.swagger-ui .topbar { display: none }'
+      };
+
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+
 }).catch(error => console.error(`Database connection error: ${error.message}`))
 
 mongoose.connection.on('error', function (err) {
