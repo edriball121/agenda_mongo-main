@@ -12,8 +12,11 @@ const areaSchema = new Schema({
         type: String
     },
     status: {
-        type: String
+        type: Boolean
     }
+}, {
+    collection: 'area',
+    versionKey: false
 })
 
 module.exports = mongoose.model('area', areaSchema)

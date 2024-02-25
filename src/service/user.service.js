@@ -1,4 +1,5 @@
 const User = require('./../database/models/user.model');
+
 class userService {
     constructor() {
         this.User = User;
